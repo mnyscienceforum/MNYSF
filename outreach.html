@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach — MNYSA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><span class="logo-mark">MNYSA</span></a>
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="outreach.html" class="active">Outreach</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="hero-bg-pattern"></div>
+        <div class="page-header-content">
+            <h1>Outreach</h1>
+            <p>Bringing science directly to students across Minnesota.</p>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="content-narrow">
+            <p class="section-eyebrow">What We Do</p>
+            <h2 class="section-heading">Science in every classroom</h2>
+            <p class="body-text">Beyond our classes and competition prep, MNYSA volunteers personally visit middle and high school classrooms in underrepresented and underserved communities throughout Minnesota. We believe that a student's first exposure to competitive science shouldn't depend on their zip code — so we go to them.</p>
+            <p class="body-text" style="margin-top: 1rem;">Our outreach visits are hands-on and interactive. We introduce students to subjects like biology, chemistry, physics, and earth science through demonstrations, practice questions, and conversation. We want every student to leave the session excited about science and aware of the opportunities available to them.</p>
+            <p class="body-text" style="margin-top: 1rem;">If you're a teacher or school administrator interested in hosting a visit, please reach out — we'd love to come to your classroom.</p>
+            <a href="contact.html" class="btn btn-secondary" style="margin-top: 1.5rem;">Request a Visit &rarr;</a>
+        </div>
+    </section>
+
+    <section class="content-section" style="padding-top: 0;">
+        <div class="container">
+            <p class="section-eyebrow" style="text-align:center;">Gallery</p>
+            <h2 class="section-heading" style="text-align:center; margin-bottom: 2rem;">From our visits</h2>
+        </div>
+
+        <div class="slider-wrap">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Add <img> tags here when you have photos, e.g.:
+                     <div class="slide"><img src="outreach/photo1.jpg" alt="Classroom visit"></div>
+                -->
+                <div class="slide slide-placeholder">
+                    <span>Photo coming soon</span>
+                </div>
+                <div class="slide slide-placeholder">
+                    <span>Photo coming soon</span>
+                </div>
+                <div class="slide slide-placeholder">
+                    <span>Photo coming soon</span>
+                </div>
+            </div>
+
+            <button class="slider-arrow slider-arrow-left" id="sliderPrev" aria-label="Previous photo">&#8592;</button>
+            <button class="slider-arrow slider-arrow-right" id="sliderNext" aria-label="Next photo">&#8594;</button>
+
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="logo-mark">MNYSA</span>
+                <p>Minnesota Youth Science Advocacy</p>
+            </div>
+            <div class="footer-right">
+                <p>Contact: <a href="mailto:mnysf.info@gmail.com">mnysf.info@gmail.com</a></p>
+                <p>&copy; 2026 MNYSA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script>
+        (function () {
+            const track = document.getElementById('sliderTrack');
+            const slides = track.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('sliderPrev');
+            const nextBtn = document.getElementById('sliderNext');
+            const dotsContainer = document.getElementById('sliderDots');
+            let current = 0;
+
+            // Build dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function goTo(index) {
+                slides[current].classList.remove('active');
+                dotsContainer.querySelectorAll('.slider-dot')[current].classList.remove('active');
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dotsContainer.querySelectorAll('.slider-dot')[current].classList.add('active');
+            }
+
+            slides[0].classList.add('active');
+            prevBtn.addEventListener('click', () => goTo(current - 1));
+            nextBtn.addEventListener('click', () => goTo(current + 1));
+
+            // Keyboard support
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goTo(current - 1);
+                if (e.key === 'ArrowRight') goTo(current + 1);
+            });
+        })();
+    </script>
+</body>
+</html>
