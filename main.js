@@ -199,4 +199,34 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 60,
         easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
     });
+
+    // ── Program slider ───────────────────────────────────────────────
+    const programTrack = document.getElementById('programTrack');
+    if (programTrack) {
+        const programSlides = programTrack.querySelectorAll('.program-slide');
+        const programDotsContainer = document.getElementById('programDots');
+        const programPrev = document.getElementById('programPrev');
+        const programNext = document.getElementById('programNext');
+        let programCurrent = 0;
+
+        programSlides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => programGoTo(i));
+            programDotsContainer.appendChild(dot);
+        });
+
+        function programGoTo(n) {
+            programSlides[programCurrent].classList.remove('active');
+            programDotsContainer.querySelectorAll('.slider-dot')[programCurrent].classList.remove('active');
+            programCurrent = (n + programSlides.length) % programSlides.length;
+            programSlides[programCurrent].classList.add('active');
+            programDotsContainer.querySelectorAll('.slider-dot')[programCurrent].classList.add('active');
+        }
+
+        if (programPrev) programPrev.addEventListener('click', () => programGoTo(programCurrent - 1));
+        if (programNext) programNext.addEventListener('click', () => programGoTo(programCurrent + 1));
+
+        setInterval(() => programGoTo(programCurrent + 1), 6000);
+    }
 });
