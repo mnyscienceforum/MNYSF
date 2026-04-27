@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── More dropdown ────────────────────────────────────────────────
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+    if (dropdown && dropdownBtn) {
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('open');
+        });
+        document.addEventListener('click', () => dropdown.classList.remove('open'));
+        dropdown.addEventListener('click', (e) => e.stopPropagation());
+    }
+
     // ── Hero background slideshow ────────────────────────────────────
     const slides = document.querySelectorAll('.hero-slideshow img');
     if (slides.length > 1) {
@@ -194,9 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addScrollAnimations();
 
+    const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname.endsWith('/');
+
     AOS.init({
         once: true,
-        offset: 60,
+        offset: isHome ? 60 : -9999,
         easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
     });
 

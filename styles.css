@@ -195,6 +195,88 @@ ul { list-style: none; }
     background: rgba(59, 98, 85, 0.1);
 }
 
+/* ---- More dropdown ---- */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-btn {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--espresso-l);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius);
+    transition: all var(--transition);
+    letter-spacing: 0.02em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown-btn.active {
+    color: var(--terracotta);
+    background: rgba(59, 98, 85, 0.1);
+}
+
+.nav-dropdown-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform 0.2s ease;
+    margin-top: 1px;
+}
+
+.nav-dropdown.open .nav-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: #fff;
+    border: 1.5px solid rgba(30, 58, 47, 0.12);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px rgba(30, 58, 47, 0.12);
+    min-width: 150px;
+    padding: 0.35rem;
+    flex-direction: column;
+    z-index: 200;
+    list-style: none;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: flex;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.4rem 0.85rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--espresso-l);
+    border-radius: var(--radius);
+    transition: all var(--transition);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+    color: var(--terracotta);
+    background: rgba(59, 98, 85, 0.1);
+}
+
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
 .nav-toggle span {
     display: block;
@@ -615,40 +697,150 @@ ul { list-style: none; }
 /* ---- Staff Grid ---- */
 .staff-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
 }
 
 .staff-card {
     text-align: center;
+    padding: 0 0.5rem;
 }
 
 .staff-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: var(--radius);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0.6rem;
     border: 2px solid var(--ink);
     background: var(--cream-dark);
     box-shadow: var(--shadow-brutal-sm);
 }
 
 .staff-photo-placeholder {
-    width: 120px;
-    height: 120px;
-    border-radius: var(--radius);
-    margin: 0 auto 0.75rem;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin: 0 auto 0.6rem;
     background: var(--cream-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-display);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--warm-gray-l);
     border: 2px solid var(--ink);
     box-shadow: var(--shadow-brutal-sm);
+}
+
+.staff-clickable {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.staff-clickable:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 0 var(--ink);
+}
+
+/* ---- Bio Modal ---- */
+.bio-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.bio-modal[hidden] { display: none; }
+
+.bio-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+}
+
+.bio-modal-panel {
+    position: relative;
+    background: var(--cream);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    border-radius: var(--radius);
+    max-width: 480px;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.bio-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--ink);
+    line-height: 1;
+}
+.bio-modal-close:hover { opacity: 0.6; }
+
+.bio-modal-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow-brutal-sm);
+}
+
+.bio-modal-placeholder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--cream-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--warm-gray-l);
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow-brutal-sm);
+}
+
+.bio-modal-body {
+    text-align: center;
+}
+
+.bio-modal-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+}
+
+.bio-modal-role {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    color: var(--warm-gray);
+    margin-bottom: 0.75rem;
+}
+
+.bio-modal-bio {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.65;
+    text-align: left;
 }
 
 .staff-card h3 {
@@ -1134,6 +1326,17 @@ ul { list-style: none; }
 
     .nav-toggle { display: block; }
 
+    .nav-dropdown-menu {
+        position: static;
+        display: flex;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 0.75rem;
+        min-width: unset;
+    }
+
+    .nav-dropdown-btn { display: none; }
+
     .two-col, .two-col.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
@@ -1147,7 +1350,7 @@ ul { list-style: none; }
 
     .track-grid { grid-template-columns: 1fr 1fr; }
 
-    .staff-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    .staff-grid { grid-template-columns: repeat(3, 1fr); }
 
     .contact-info-grid { grid-template-columns: 1fr; }
 
@@ -1159,6 +1362,7 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
     .track-grid { grid-template-columns: 1fr; }
+    .staff-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---- Animations ---- */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competition — MNYSF</title>
+    <title>Competition — NYSI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- Helvetica Neue / system font stack -->
@@ -11,27 +11,34 @@
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"><span class="logo-mark">MNYSF</span></a>
+            <a href="index.html" class="nav-logo"><span class="logo-mark">NYSI</span></a>
             <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
+                <li><a href="chapters.html">Chapters</a></li>
                 <li><a href="competition.html" class="active">Competition</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-btn">More <span class="nav-dropdown-arrow"></span></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="outreach.html">Outreach</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
+    <!-- REVIEW: This date (August 29, 2026) is the MN-NYSI chapter competition date. If the national site will eventually list multi-chapter competitions, consider whether this page should narrow to chapter-specific events. -->
     <div class="page-header page-header-has-img" style="background-image: url('background2/Bck21.png')">
         <div class="page-header-overlay"></div>
         <div class="page-header-content">
             <p class="section-eyebrow">[Tentative] August 29, 2026</p>
             <h1>Science Competition</h1>
-            <p>A science test & buzzer-based team tournament covering Physics, Chemistry, Biology, Earth &amp; Space Science, and more.</p>
+            <p>A science test &amp; buzzer-based team tournament covering Physics, Chemistry, Biology, Earth &amp; Space Science, and more.</p>
         </div>
     </div>
 
@@ -39,10 +46,11 @@
         <div class="content-narrow">
             <p class="section-eyebrow">Format</p>
             <h2 class="section-heading">How it works</h2>
-            <p class="body-text">Teams of 4 compete in a bracket-style Science Bowl tournament. Matches are buzzer-based, with toss-up and bonus questions spanning all five science disciplines. The morning session features preliminary rounds used to seed and balance teams, followed by single-elimination brackets in the afternoon.</p>
+            <p class="body-text"><strong>Morning — Individual &amp; Team Test:</strong> Competitors first take an individual multiple-choice section with 30 questions in 20 minutes. This is followed by a team round where 4 students collaborate to solve 5 free-response problems in 20 minutes.</p>
+            <p class="body-text" style="margin-top: 1rem;"><strong>Afternoon — Science Bowl:</strong> Teams of 4 compete in a bracket-style Science Bowl tournament. Matches are buzzer-based, with toss-up and bonus questions spanning all five science disciplines. Preliminary rounds seed teams, followed by double-elimination brackets in the afternoon.</p>
 
             <div class="comp-highlight-card" style="margin-top: 2rem;">
-                <div class="comp-detail"><span>Format</span><strong>Science Bowl (buzzer-based)</strong></div>
+                <div class="comp-detail"><span>Format</span><strong>Individual Test + Science Bowl</strong></div>
                 <div class="comp-detail"><span>Team Size</span><strong>4 per team</strong></div>
                 <div class="comp-detail"><span>Expected Teams</span><strong>~20</strong></div>
                 <div class="comp-detail"><span>Buzzer Sets</span><strong>8</strong></div>
@@ -89,7 +97,7 @@
     <section class="section section-cta">
         <div class="container cta-container">
             <h2 class="section-heading">Want to compete?</h2>
-            <p class="body-text">Fill out the interest form and we'll send you team registration details when they open.</p>
+            <p class="body-text">Compete in a 30-question individual test, a 5-problem team free-response round, and a buzzer-based Science Bowl bracket — all in one day. Fill out the interest form and we'll send registration details when they open.</p>
             <a href="https://docs.google.com/forms/d/1gMmvx8oNU8xuOmrKT-ZEvv5v0Z1Ip0icKx-Gk0GqVbA/viewform" class="btn btn-primary" target="_blank">Interest Form</a>
         </div>
     </section>
@@ -97,12 +105,12 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
-                <span class="logo-mark">MNYSF</span>
-                <p>Minnesota Youth Science Forum</p>
+                <span class="logo-mark">NYSI</span>
+                <p>National Youth Science Initiative</p>
             </div>
             <div class="footer-right">
-                <p>Contact: <a href="mailto:mnyouthscienceforum@gmail.com">mnyouthscienceforum@gmail.com</a></p>
-                <p>&copy; 2026 MNYSF. All rights reserved.</p>
+                <p>Contact: <a href="mailto:nyouthscienceinitiative@gmail.com">nyouthscienceinitiative@gmail.com</a></p>
+                <p>&copy; 2026 NYSI. All rights reserved.</p>
             </div>
         </div>
     </footer>

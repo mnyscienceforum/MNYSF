@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes — MNYSF</title>
+    <title>Classes — NYSI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- Helvetica Neue / system font stack -->
@@ -11,21 +11,28 @@
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"><span class="logo-mark">MNYSF</span></a>
+            <a href="index.html" class="nav-logo"><span class="logo-mark">NYSI</span></a>
             <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html" class="active">Classes</a></li>
+                <li><a href="chapters.html">Chapters</a></li>
                 <li><a href="competition.html">Competition</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-btn">More <span class="nav-dropdown-arrow"></span></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="outreach.html">Outreach</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
+    <!-- REVIEW: These dates (August 24–28, 2026) are for the MN-NYSI chapter. Update if this page becomes chapter-agnostic. -->
     <div class="page-header page-header-has-img" style="background-image: url('background2/Bck22.png')">
         <div class="page-header-overlay"></div>
         <div class="page-header-content">
@@ -118,12 +125,12 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
-                <span class="logo-mark">MNYSF</span>
-                <p>Minnesota Youth Science Forum</p>
+                <span class="logo-mark">NYSI</span>
+                <p>National Youth Science Initiative</p>
             </div>
             <div class="footer-right">
-                <p>Contact: <a href="mailto:mnyouthscienceforum@gmail.com">mnyouthscienceforum@gmail.com</a></p>
-                <p>&copy; 2026 MNYSF. All rights reserved.</p>
+                <p>Contact: <a href="mailto:nyouthscienceinitiative@gmail.com">nyouthscienceinitiative@gmail.com</a></p>
+                <p>&copy; 2026 NYSI. All rights reserved.</p>
             </div>
         </div>
     </footer>

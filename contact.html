@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — MNYSF</title>
+    <title>Contact — NYSI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- Helvetica Neue / system font stack -->
@@ -11,17 +11,23 @@
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"><span class="logo-mark">MNYSF</span></a>
+            <a href="index.html" class="nav-logo"><span class="logo-mark">NYSI</span></a>
             <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
+                <li><a href="chapters.html">Chapters</a></li>
                 <li><a href="competition.html">Competition</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-btn active">More <span class="nav-dropdown-arrow"></span></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="outreach.html">Outreach</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -40,22 +46,23 @@
                 <div class="contact-card">
                     <h3>General Inquiries</h3>
                     <p>For questions about the camp, competition, or registration:</p>
-                    <a href="mailto:mnyouthscienceforum@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">mnyouthscienceforum@gmail.com</a>
+                    <a href="mailto:nyouthscienceinitiative@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">nyouthscienceinitiative@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <h3>Sponsorships</h3>
-                    <p>Interested in sponsoring MNYSF or donating materials?</p>
-                    <a href="mailto:mnyouthscienceforum@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">mnyouthscienceforum@gmail.com</a>
+                    <p>Interested in sponsoring NYSI or donating materials?</p>
+                    <a href="mailto:nyouthscienceinitiative@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">nyouthscienceinitiative@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <h3>Volunteering</h3>
                     <p>High school or college student interested in teaching or helping out?</p>
-                    <a href="mailto:mnyouthscienceforum@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">mnyouthscienceforum@gmail.com</a>
+                    <a href="mailto:nyouthscienceinitiative@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">nyouthscienceinitiative@gmail.com</a>
                 </div>
+                <!-- REVIEW: Renamed "Schools & Extensions" → "Start a Chapter" to match the new Chapters page. The old card said "Want to bring MNYSF to your school or state?" — now it points to chapters.html. Adjust the copy if you want a different framing here. -->
                 <div class="contact-card">
-                    <h3>Schools &amp; Extensions</h3>
-                    <p>Want to bring MNYSF to your school or state? Let's talk.</p>
-                    <a href="mailto:mnyouthscienceforum@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">mnyouthscienceforum@gmail.com</a>
+                    <h3>Start a Chapter</h3>
+                    <p>Want to bring NYSI to your community? Learn more on our <a href="chapters.html">Chapters page</a> or reach out directly.</p>
+                    <a href="mailto:nyouthscienceinitiative@gmail.com" style="display: inline-block; margin-top: 0.75rem; font-weight: 600;">nyouthscienceinitiative@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -72,12 +79,12 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
-                <span class="logo-mark">MNYSF</span>
-                <p>Minnesota Youth Science Forum</p>
+                <span class="logo-mark">NYSI</span>
+                <p>National Youth Science Initiative</p>
             </div>
             <div class="footer-right">
-                <p>Contact: <a href="mailto:mnyouthscienceforum@gmail.com">mnyouthscienceforum@gmail.com</a></p>
-                <p>&copy; 2026 MNYSF. All rights reserved.</p>
+                <p>Contact: <a href="mailto:nyouthscienceinitiative@gmail.com">nyouthscienceinitiative@gmail.com</a></p>
+                <p>&copy; 2026 NYSI. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minnesota Youth Science Forum</title>
+    <title>National Youth Science Initiative</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- Helvetica Neue / system font stack -->
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
-                <span class="logo-mark">MNYSF</span>
+                <span class="logo-mark">NYSI</span>
             </a>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -20,12 +20,18 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
+                <li><a href="chapters.html">Chapters</a></li>
                 <li><a href="competition.html">Competition</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-btn">More <span class="nav-dropdown-arrow"></span></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="outreach.html">Outreach</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -39,20 +45,21 @@
         <div class="hero-overlay"></div>
         <div class="hero-bg-pattern"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow">Summer 2026 &middot; Minneapolis, MN</p>
-            <h1 class="hero-title">Minnesota Youth<br>Science Forum</h1>
-            <p class="hero-subtitle">A free, student-run intensive science camp and Science Bowl competition for Minnesota's brightest young minds.</p>
+            <!-- REVIEW: Eyebrow currently says "Nationwide" — update if you want to anchor this to a specific flagship location or chapter. -->
+            <p class="hero-eyebrow">Summer 2026 &middot; Nationwide</p>
+            <h1 class="hero-title">National Youth<br>Science Initiative</h1>
+            <p class="hero-subtitle">A free, student-run program introducing science across disciplines through classes and outreach to students across the country.</p>
             <div class="hero-actions">
                 <a href="https://docs.google.com/forms/d/1gMmvx8oNU8xuOmrKT-ZEvv5v0Z1Ip0icKx-Gk0GqVbA/viewform" class="btn btn-primary" target="_blank">Interest Form</a>
                 <a href="classes.html" class="btn btn-secondary">Explore Classes &rarr;</a>
             </div>
             <div class="hero-dates">
                 <div class="date-card">
-                    <span class="date-label">Camp</span>
+                    <span class="date-label">MN-CAMP</span>
                     <span class="date-value">Aug 24 - 28</span>
                 </div>
                 <div class="date-card">
-                    <span class="date-label">Competition</span>
+                    <span class="date-label">MN-COMPETITION (Tentative)</span>
                     <span class="date-value">Aug 29</span>
                 </div>
             </div>
@@ -63,9 +70,9 @@
         <div class="container">
             <div class="two-col">
                 <div class="col-text">
-                    <p class="section-eyebrow">What is MNYSF?</p>
+                    <p class="section-eyebrow">What is NYSI?</p>
                     <h2 class="section-heading">Five days of immersive science,<br>one day of competition.</h2>
-                    <p class="body-text">Minnesota Youth Science Forum is a free, student-organized program designed to prepare middle and high school students for science competitions — and to spark a lifelong love of scientific inquiry. Over five days, students attend intensive classes in Physics, Chemistry, Biology, and Earth & Space Science, taught by top high school students and guided by structured problem sets. The week culminates in a Science Bowl–style tournament on the final day.</p>
+                    <p class="body-text">National Youth Science Initiative is a free, student-organized program designed to encourage middle students and rising 9th-graders to become exposed to the breadth of science. Over five days, students attend intensive classes in Physics, Chemistry, Biology, and Earth & Space Science, taught by experienced high school students and guided by structured problem sets. The week culminates in a Science ARML/Bowl-style tournament on the final day (varies for each chapter)!</p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
                         <a href="classes.html" class="btn btn-secondary">View Classes &rarr;</a>
                         <a href="competition.html" class="btn btn-secondary">Competition Details &rarr;</a>
@@ -109,12 +116,12 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
-                <span class="logo-mark">MNYSF</span>
-                <p>Minnesota Youth Science Forum</p>
+                <span class="logo-mark">NYSI</span>
+                <p>National Youth Science Initiative</p>
             </div>
             <div class="footer-right">
-                <p>Contact: <a href="mailto:mnyouthscienceforum@gmail.com">mnyouthscienceforum@gmail.com</a></p>
-                <p>&copy; 2026 MNYSF. All rights reserved.</p>
+                <p>Contact: <a href="mailto:nyouthscienceinitiative@gmail.com">nyouthscienceinitiative@gmail.com</a></p>
+                <p>&copy; 2026 NYSI. All rights reserved.</p>
             </div>
         </div>
     </footer>
