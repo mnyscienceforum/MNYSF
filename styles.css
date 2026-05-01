@@ -383,7 +383,7 @@ ul { list-style: none; }
     gap: 1rem;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
 }
 
 .hero-dates {
@@ -1289,6 +1289,93 @@ ul { list-style: none; }
     border-radius: 0;
     background: var(--terracotta);
     transform: translateY(-50%);
+}
+
+/* ---- Hero Buttons (unified) ---- */
+.btn-hero {
+    background: #2E3D2F;
+    color: #fff;
+    border-color: #1A2A1B;
+    box-shadow: 3px 3px 0 #1A2A1B;
+}
+.btn-hero:hover {
+    background: #1A2A1B;
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #1A2A1B;
+}
+
+/* ---- Summer Schedule Button (hero) ---- */
+.btn-schedule {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: var(--radius);
+    background: var(--gold);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow-brutal-sm);
+    transition: all var(--transition);
+    cursor: pointer;
+    letter-spacing: 0.01em;
+}
+.btn-schedule:hover {
+    background: #fff;
+    color: var(--ink);
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-brutal-hover);
+}
+
+/* ---- Schedule Date Cards (classes page) ---- */
+.schedule-date-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.schedule-date-card {
+    background: var(--espresso);
+    border: 2.5px solid var(--ink);
+    border-radius: var(--radius);
+    padding: 1.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-brutal);
+    min-width: 220px;
+}
+
+.schedule-date-label {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+}
+
+.schedule-date-value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.schedule-date-note {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--warm-gray-l);
+}
+
+@media (max-width: 600px) {
+    .schedule-date-row { flex-direction: column; }
+    .btn-schedule { font-size: 1rem; padding: 0.95rem 2rem; }
 }
 
 /* ---- Responsive ---- */
